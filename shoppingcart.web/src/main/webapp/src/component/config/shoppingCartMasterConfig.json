@@ -1,0 +1,13 @@
+{
+    "displayName" : "ShoppingCart",
+    "name" : "shoppingcart",
+    "templateName" : "shoppingcart",
+    "url" : "shoppingcart.html",
+    "server": "localhost:8080",
+    "server": "localhost:8080",
+    
+    "context": "/shoppingcart.web/webresources/master/shopping_carts",
+       
+    
+    "el" : "#main"
+}

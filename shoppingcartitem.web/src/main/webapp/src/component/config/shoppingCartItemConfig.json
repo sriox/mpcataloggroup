@@ -1,0 +1,10 @@
+{
+    "displayName" : "ShoppingCartItem",
+    "name" : "shoppingCartItem",
+    "templateName" : "shoppingCartItem",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/shoppingcartitem.web/webresources/shopping_cart_items",
+      
+    "el" : "#main"
+}

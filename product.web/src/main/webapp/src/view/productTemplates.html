@@ -1,0 +1,31 @@
+<script type="text/template" id="product">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-productForm">
+    <% if(product.id) {%>
+    <input type="hidden" name="id" value="<%= product.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= product.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="description">Description</label>
+    	<input type="text" class="form-control" id="description" name="description" placeholder="Enter value" value="<%= product.get('description') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="price">Price</label>
+    	<input type="text" class="form-control" id="price" name="price" placeholder="Enter value" value="<%= product.get('price') %>"/>	
+		</div>
+		<div class="form-group" >
+ 
+			<label for="categoryidId">Category Id</label> 
+            <select class="form-control" id="categoryId" name="categoryId">
+			  <option value="">None</option>
+            <% category.each(function(categoryid) { %> 
+              <option value="<%=categoryid.get('id')%>" <% if(product.get('categoryId')==categoryid.get('id')) {%>selected<%}%> ><%=categoryid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

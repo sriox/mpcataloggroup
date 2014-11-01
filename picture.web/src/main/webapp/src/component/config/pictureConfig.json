@@ -1,0 +1,10 @@
+{
+    "displayName" : "Picture",
+    "name" : "picture",
+    "templateName" : "picture",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/picture.web/webresources/pictures",
+      
+    "el" : "#main"
+}

@@ -1,0 +1,53 @@
+<script type="text/template" id="purchase">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-purchaseForm">
+    <% if(purchase.id) {%>
+    <input type="hidden" name="id" value="<%= purchase.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= purchase.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+			<label for="purchaseDate">Purchase Date</label>
+    		<input type="text" data-converter="date" data-date-format="dd/mm/yyyy" class="form-control" id="purchaseDate"  name="purchaseDate" placeholder="Enter value" />
+    		<%= '<scr'+'ipt>' %>
+        	$('#purchaseDate').datepicker({autoclose:true});
+        	$('#purchaseDate').datepicker('setDate',App.Utils.Converter.date.toDate("<%= purchase.get('purchaseDate') %>"));
+    		<%= '</scr'+'ipt>' %>
+		</div>
+		<div class="form-group" >
+		<label for="totalValue">Total Value</label>
+    	<input type="text" class="form-control" id="totalValue" name="totalValue" placeholder="Enter value" value="<%= purchase.get('totalValue') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="totalItems">Total Items</label>
+    	<input type="text" class="form-control" id="totalItems" name="totalItems" placeholder="Enter value" value="<%= purchase.get('totalItems') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="points">Points</label>
+    	<input type="text" class="form-control" id="points" name="points" placeholder="Enter value" value="<%= purchase.get('points') %>"/>	
+		</div>
+		<div class="form-group" >
+ 
+			<label for="buyeridId">Buyer Id</label> 
+            <select class="form-control" id="buyerId" name="buyerId">
+			  <option value="">None</option>
+            <% buyer.each(function(buyerid) { %> 
+              <option value="<%=buyerid.get('id')%>" <% if(purchase.get('buyerId')==buyerid.get('id')) {%>selected<%}%> ><%=buyerid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+		<div class="form-group" >
+ 
+			<label for="addressidId">Address Id</label> 
+            <select class="form-control" id="addressId" name="addressId">
+			  <option value="">None</option>
+            <% address.each(function(addressid) { %> 
+              <option value="<%=addressid.get('id')%>" <% if(purchase.get('addressId')==addressid.get('id')) {%>selected<%}%> ><%=addressid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

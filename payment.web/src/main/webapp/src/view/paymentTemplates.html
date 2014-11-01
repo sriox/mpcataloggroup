@@ -1,0 +1,41 @@
+<script type="text/template" id="payment">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-paymentForm">
+    <% if(payment.id) {%>
+    <input type="hidden" name="id" value="<%= payment.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="value">Value</label>
+    	<input type="text" class="form-control" id="value" name="value" placeholder="Enter value" value="<%= payment.get('value') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="tokenBank">Token Bank</label>
+    	<input type="text" class="form-control" id="tokenBank" name="tokenBank" placeholder="Enter value" value="<%= payment.get('tokenBank') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= payment.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+ 
+			<label for="creditcardidId">Creditcard Id</label> 
+            <select class="form-control" id="creditcardId" name="creditcardId">
+			  <option value="">None</option>
+            <% creditCard.each(function(creditcardid) { %> 
+              <option value="<%=creditcardid.get('id')%>" <% if(payment.get('creditcardId')==creditcardid.get('id')) {%>selected<%}%> ><%=creditcardid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+		<div class="form-group" >
+ 
+			<label for="paymentmodeidId">Paymentmode Id</label> 
+            <select class="form-control" id="paymentmodeId" name="paymentmodeId">
+			  <option value="">None</option>
+            <% paymentMode.each(function(paymentmodeid) { %> 
+              <option value="<%=paymentmodeid.get('id')%>" <% if(payment.get('paymentmodeId')==paymentmodeid.get('id')) {%>selected<%}%> ><%=paymentmodeid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

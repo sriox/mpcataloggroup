@@ -1,0 +1,29 @@
+<script type="text/template" id="address">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-addressForm">
+    <% if(address.id) {%>
+    <input type="hidden" name="id" value="<%= address.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="city">City</label>
+    	<input type="text" class="form-control" id="city" name="city" placeholder="Enter value" value="<%= address.get('city') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="address">Address</label>
+    	<input type="text" class="form-control" id="address" name="address" placeholder="Enter value" value="<%= address.get('address') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="country">Country</label>
+    	<input type="text" class="form-control" id="country" name="country" placeholder="Enter value" value="<%= address.get('country') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="contactName">Contact Name</label>
+    	<input type="text" class="form-control" id="contactName" name="contactName" placeholder="Enter value" value="<%= address.get('contactName') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= address.get('name') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

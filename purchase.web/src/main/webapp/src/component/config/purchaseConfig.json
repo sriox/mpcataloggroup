@@ -1,0 +1,10 @@
+{
+    "displayName" : "Purchase",
+    "name" : "purchase",
+    "templateName" : "purchase",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/purchase.web/webresources/purchases",
+      
+    "el" : "#main"
+}

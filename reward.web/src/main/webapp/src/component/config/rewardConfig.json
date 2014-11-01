@@ -1,0 +1,10 @@
+{
+    "displayName" : "Reward",
+    "name" : "reward",
+    "templateName" : "reward",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/reward.web/webresources/rewards",
+      
+    "el" : "#main"
+}

@@ -1,0 +1,23 @@
+<script type="text/template" id="category">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-categoryForm">
+    <% if(category.id) {%>
+    <input type="hidden" name="id" value="<%= category.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= category.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+ 
+			<label for="categoryidId">Category Id</label> 
+            <select class="form-control" id="categoryId" name="categoryId">
+			  <option value="">None</option>
+            <% category.each(function(categoryid) { %> 
+              <option value="<%=categoryid.get('id')%>" <% if(category.get('categoryId')==categoryid.get('id')) {%>selected<%}%> ><%=categoryid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

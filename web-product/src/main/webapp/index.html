@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="./js/vendor/jquery-1.9.1.js"></script>
+        <script src="./js/vendor/bootstrap.min.js"></script>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="../../assets/js/html5shiv.js"></script>
+          <script src="../../assets/js/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            function redirectFrame(url) {
+                $('#container').attr('src', url);
+                $('#container').css('height', ($(window).height() - $('#header').height() - 30) + 'px');
+            }
+            
+            </script>
+    </head>
+    <body>
+        <div id="header" >
+            <div class="btn-group navbar-default menu" style="width: 100%;">
+	            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	                Menu <span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu" role="menu">
+	                <li><a href="#" onclick="redirectFrame('/product.web/'); return false;">Product</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/category.web/'); return false;">Category</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/shoppingcart.web/'); return false;">ShoppingCart</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/shoppingcartitem.web/'); return false;">ShoppingCartItem</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/buyer.web/'); return false;">Buyer</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/user.web/'); return false;">User</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/address.web/'); return false;">Address</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/paymentmode.web/'); return false;">PaymentMode</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/purchase.web/'); return false;">Purchase</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/purchaseitem.web/'); return false;">PurchaseItem</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/creditcard.web/'); return false;">CreditCard</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/picture.web/'); return false;">Picture</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/score.web/'); return false;">Score</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/bonus.web/'); return false;">Bonus</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/reward.web/'); return false;">Reward</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/feature.web/'); return false;">Feature</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/payment.web/'); return false;">Payment</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/wishlist.web/'); return false;">WishList</a></li>    
+	                <li><a href="#" onclick="redirectFrame('/wishlistitem.web/'); return false;">WishListItem</a></li>    
+	                <li class="divider"></li>
+	           			     <li><a href="#" onclick="redirectFrame('/product.web/productMaster.html'); return false;">Product Master</a></li>
+	           			     <li><a href="#" onclick="redirectFrame('/shoppingcart.web/shoppingCartMaster.html'); return false;">ShoppingCart Master</a></li>
+	           			     <li><a href="#" onclick="redirectFrame('/buyer.web/buyerMaster.html'); return false;">Buyer Master</a></li>
+	           			     <li><a href="#" onclick="redirectFrame('/purchase.web/purchaseMaster.html'); return false;">Purchase Master</a></li>
+	           			     <li><a href="#" onclick="redirectFrame('/wishlist.web/wishListMaster.html'); return false;">WishList Master</a></li>
+	            </ul>
+	        </div>
+	        <hr/>
+        </div>
+        <iframe id="container" src="" style="width: 100%; height: 100%; border: 0; margin: 0;"></iframe> 
+    </body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "displayName" : "Feature",
+    "name" : "feature",
+    "templateName" : "feature",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/feature.web/webresources/features",
+      
+    "el" : "#main"
+}

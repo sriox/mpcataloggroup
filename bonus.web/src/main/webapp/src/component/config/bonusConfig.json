@@ -1,0 +1,10 @@
+{
+    "displayName" : "Bonus",
+    "name" : "bonus",
+    "templateName" : "bonus",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/bonus.web/webresources/bonuss",
+      
+    "el" : "#main"
+}

@@ -1,0 +1,10 @@
+{
+    "displayName" : "Buyer",
+    "name" : "buyer",
+    "templateName" : "buyer",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/buyer.web/webresources/buyers",
+      
+    "el" : "#main"
+}

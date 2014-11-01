@@ -1,0 +1,10 @@
+{
+    "displayName" : "Category",
+    "name" : "category",
+    "templateName" : "category",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/category.web/webresources/categorys",
+      
+    "el" : "#main"
+}

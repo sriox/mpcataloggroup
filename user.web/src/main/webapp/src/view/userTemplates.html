@@ -1,0 +1,49 @@
+<script type="text/template" id="user">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-userForm">
+    <% if(user.id) {%>
+    <input type="hidden" name="id" value="<%= user.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="username">Username</label>
+    	<input type="text" class="form-control" id="username" name="username" placeholder="Enter value" value="<%= user.get('username') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="password">Password</label>
+    	<input type="text" class="form-control" id="password" name="password" placeholder="Enter value" value="<%= user.get('password') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="email">Email</label>
+    	<input type="text" class="form-control" id="email" name="email" placeholder="Enter value" value="<%= user.get('email') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="firstName">First Name</label>
+    	<input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter value" value="<%= user.get('firstName') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="secondName">Second Name</label>
+    	<input type="text" class="form-control" id="secondName" name="secondName" placeholder="Enter value" value="<%= user.get('secondName') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="lastName">Last Name</label>
+    	<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter value" value="<%= user.get('lastName') %>"/>	
+		</div>
+		<div class="form-group" >
+			<label for="birthDate">Birth Date</label>
+    		<input type="text" data-converter="date" data-date-format="dd/mm/yyyy" class="form-control" id="birthDate"  name="birthDate" placeholder="Enter value" />
+    		<%= '<scr'+'ipt>' %>
+        	$('#birthDate').datepicker({autoclose:true});
+        	$('#birthDate').datepicker('setDate',App.Utils.Converter.date.toDate("<%= user.get('birthDate') %>"));
+    		<%= '</scr'+'ipt>' %>
+		</div>
+		<div class="form-group" >
+		<label for="gender">Gender</label>
+    	<input type="text" class="form-control" id="gender" name="gender" placeholder="Enter value" value="<%= user.get('gender') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= user.get('name') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

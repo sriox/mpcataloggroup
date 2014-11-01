@@ -1,0 +1,10 @@
+{
+    "displayName" : "WishListItem",
+    "name" : "wishListItem",
+    "templateName" : "wishListItem",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/wishlistitem.web/webresources/wish_list_items",
+      
+    "el" : "#main"
+}

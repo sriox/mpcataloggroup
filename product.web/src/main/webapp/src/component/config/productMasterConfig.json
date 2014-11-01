@@ -1,0 +1,13 @@
+{
+    "displayName" : "Product",
+    "name" : "product",
+    "templateName" : "product",
+    "url" : "product.html",
+    "server": "localhost:8080",
+    "server": "localhost:8080",
+    
+    "context": "/product.web/webresources/master/products",
+       
+    
+    "el" : "#main"
+}

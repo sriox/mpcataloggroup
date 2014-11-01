@@ -1,0 +1,45 @@
+<script type="text/template" id="score">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-scoreForm">
+    <% if(score.id) {%>
+    <input type="hidden" name="id" value="<%= score.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="value">Value</label>
+    	<input type="text" class="form-control" id="value" name="value" placeholder="Enter value" value="<%= score.get('value') %>"/>	
+		</div>
+		<div class="form-group" >
+			<label for="date">Date</label>
+    		<input type="text" data-converter="date" data-date-format="dd/mm/yyyy" class="form-control" id="date"  name="date" placeholder="Enter value" />
+    		<%= '<scr'+'ipt>' %>
+        	$('#date').datepicker({autoclose:true});
+        	$('#date').datepicker('setDate',App.Utils.Converter.date.toDate("<%= score.get('date') %>"));
+    		<%= '</scr'+'ipt>' %>
+		</div>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= score.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+ 
+			<label for="useridId">User Id</label> 
+            <select class="form-control" id="userId" name="userId">
+			  <option value="">None</option>
+            <% user.each(function(userid) { %> 
+              <option value="<%=userid.get('id')%>" <% if(score.get('userId')==userid.get('id')) {%>selected<%}%> ><%=userid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+		<div class="form-group" >
+ 
+			<label for="productscoreidId">Productscore Id</label> 
+            <select class="form-control" id="productscoreId" name="productscoreId">
+			  <option value="">None</option>
+            <% productScore.each(function(productscoreid) { %> 
+              <option value="<%=productscoreid.get('id')%>" <% if(score.get('productscoreId')==productscoreid.get('id')) {%>selected<%}%> ><%=productscoreid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

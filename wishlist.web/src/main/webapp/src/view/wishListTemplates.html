@@ -1,0 +1,23 @@
+<script type="text/template" id="wishList">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-wishListForm">
+    <% if(wishList.id) {%>
+    <input type="hidden" name="id" value="<%= wishList.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= wishList.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+ 
+			<label for="buyeridId">Buyer Id</label> 
+            <select class="form-control" id="buyerId" name="buyerId">
+			  <option value="">None</option>
+            <% buyer.each(function(buyerid) { %> 
+              <option value="<%=buyerid.get('id')%>" <% if(wishList.get('buyerId')==buyerid.get('id')) {%>selected<%}%> ><%=buyerid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+    </form>
+    </div>
+</script> 

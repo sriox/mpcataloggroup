@@ -1,0 +1,17 @@
+<script type="text/template" id="feature">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-featureForm">
+    <% if(feature.id) {%>
+    <input type="hidden" name="id" value="<%= feature.id %>"/>
+    <% }%>
+		<div class="form-group" >
+		<label for="name">Name</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= feature.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="value">Value</label>
+    	<input type="text" class="form-control" id="value" name="value" placeholder="Enter value" value="<%= feature.get('value') %>"/>	
+		</div>
+    </form>
+    </div>
+</script> 

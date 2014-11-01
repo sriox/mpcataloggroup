@@ -1,0 +1,10 @@
+{
+    "displayName" : "PaymentMode",
+    "name" : "paymentMode",
+    "templateName" : "paymentMode",
+    "url" : "user.html",
+    "server": "localhost:8080",
+	"context": "/paymentmode.web/webresources/payment_modes",
+      
+    "el" : "#main"
+}
