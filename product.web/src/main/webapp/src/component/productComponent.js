@@ -76,8 +76,8 @@ define(['component/_productComponent'], function() {
              this.toolbarComponent.hideButton('cancel-search');
              this.toolbarComponent.hideButton('exec-search');
              this.toolbarComponent.render();
-             this.componentController.userSearch(this.list,this);            
-        }        
+             this.componentController.productSearch(this.list,this);            
+        },
     });
     return App.Component.ProductComponent;
 });
