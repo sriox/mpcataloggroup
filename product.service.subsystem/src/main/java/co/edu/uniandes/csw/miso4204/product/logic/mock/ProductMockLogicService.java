@@ -35,9 +35,23 @@ import javax.ejb.Stateless;
 import javax.ejb.Singleton;
 
 import co.edu.uniandes.csw.miso4204.product.logic.api.IProductLogicService;
+import co.edu.uniandes.csw.miso4204.product.logic.dto.ProductPageDTO;
+import java.util.List;
 @Default
 @Stateless
 @LocalBean
 public class ProductMockLogicService extends _ProductMockLogicService implements IProductLogicService {
+
+    public List<ProductPageDTO> getProduct(String idsFeatures, String searchText, int firstRecord, int maxRecords) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public List<ProductPageDTO> getProduct(Integer rate, String searchText, int firstRecord, int maxRecords) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public List<ProductPageDTO> getProductByCategory(Long idCategory, int firstRecord, int maxRecords) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	
 }

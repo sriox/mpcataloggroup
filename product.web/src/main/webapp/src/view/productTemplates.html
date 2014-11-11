@@ -5,20 +5,20 @@
     <input type="hidden" name="id" value="<%= product.id %>"/>
     <% }%>
 		<div class="form-group" >
-		<label for="name">Name</label>
+		<label for="name">Nombre producto</label>
     	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= product.get('name') %>"/>	
 		</div>
 		<div class="form-group" >
-		<label for="description">Description</label>
+		<label for="Descripcion">Descripcion</label>
     	<input type="text" class="form-control" id="description" name="description" placeholder="Enter value" value="<%= product.get('description') %>"/>	
 		</div>
 		<div class="form-group" >
-		<label for="price">Price</label>
+		<label for="price">Precio</label>
     	<input type="text" class="form-control" id="price" name="price" placeholder="Enter value" value="<%= product.get('price') %>"/>	
 		</div>
 		<div class="form-group" >
  
-			<label for="categoryidId">Category Id</label> 
+			<label for="categoryidId">Categoria</label> 
             <select class="form-control" id="categoryId" name="categoryId">
 			  <option value="">None</option>
             <% category.each(function(categoryid) { %> 
@@ -28,4 +28,78 @@
 		</div>
     </form>
     </div>
+</script> 
+
+
+<script type="text/template" id="productSearch">
+    <div class="form-group">
+    <form role="form" id="<%= componentId %>-productForm">
+    <% if(product.id) {%>
+    <input type="hidden" name="id" value="<%= product.id %>"/>
+    <% }%>
+	<div class="form-group" > 
+	  <label for="categoryId">Categoria</label> 
+            <select class="form-control" id="categoryId" name="categoryId">
+			  <option value="">None</option>
+            <% category.each(function(categoryid) { %> 
+              <option value="<%=categoryid.get('id')%>" <% if(product.get('categoryId')==categoryid.get('id')) {%>selected<%}%> ><%=categoryid.get('name')%></option>
+            <% }); %>                
+            </select>  
+		</div>
+            
+            
+            
+            <div class="form-group" >
+		<label for="name">Nombre</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= product.get('name') %>"/>	
+		</div>
+		<div class="form-group" >
+		<label for="description">Descripcion</label>
+    	<input type="text" class="form-control" id="description" name="description" placeholder="Enter value" value="<%= product.get('description') %>"/>	
+		</div>
+
+            
+		<label for="price">Precio</label>
+        <table border="0"><tr>    
+		<td>
+        <div class="form-group" >
+		<label for="priceMin">Desde</label>
+    	<input type="text" class="form-control" id="priceMin" name="price" placeholder="Enter value" value="<%= product.get('price') %>"/>	
+		</div>
+		</td>
+		<td>
+        <div class="form-group" >
+		<label for="priceMax">Hasta</label>
+    	<input type="text" class="form-control" id="priceMax" name="price" placeholder="Enter value" value="<%= product.get('price') %>"/>	
+		</div>
+		</td
+		</tr></table>        
+        
+		<div class="form-group" >
+		<label for="feature">Caracteristica</label>
+    	<input type="text" class="form-control" id="feature" name="feature" placeholder="Enter value" value="<%= product.get('description') %>"/>	
+		</div>
+        
+    </form>
+    </div>
+</script> 
+<!-- Nuevo template para la busqueda -->
+<script type="text/template" id="productSearch01">
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 </script> 
